@@ -1,6 +1,6 @@
 CREATE TABLE category (
     id SERIAL PRIMARY KEY,
-    domain VARCHAR(75) NOT NULL,
+    category VARCHAR(75) NOT NULL,
     description TEXT
 );
 
