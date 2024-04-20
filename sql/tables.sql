@@ -1,10 +1,10 @@
-CREATE TABLE category (
+CREATE TABLE categories (
     id SERIAL PRIMARY KEY,
     category VARCHAR(75) NOT NULL,
     description TEXT
 );
 
-CREATE INDEX idx_category_domain ON category(domain);
+CREATE INDEX idx_categories ON categories(category);
 
 CREATE TABLE questions (
     id SERIAL PRIMARY KEY,
@@ -13,6 +13,6 @@ CREATE TABLE questions (
     description TEXT,
     category_id INT NOT NULL,
     FOREIGN KEY (category_id)
-        REFERENCES category(id)
+        REFERENCES categories(id)
         ON DELETE CASCADE
 );
